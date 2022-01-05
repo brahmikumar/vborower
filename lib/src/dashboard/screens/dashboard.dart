@@ -17,12 +17,44 @@ class _DashboardState extends State<Dashboard> {
       ),
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: const EdgeInsets.all(10.0),
           child: Container(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Text("Dashboard Page")
+              children:  [
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("Principle Amount", style: Theme.of(context).textTheme.subtitle1),
+                            Text("\$29,761.83", style: Theme.of(context).textTheme.subtitle1)
+                          ],
+                        ),
+                        const SizedBox(height: 10,),
+                        const Divider(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: const [
+                            Text("Loan Amount"),
+                            Text("\$30,000.00")
+                          ],
+                        ),
+                        const SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: const [
+                            Expanded(child: Text("Rate of Interest")),
+                            Text("10%")
+                          ],
+                        ),
+                        const SizedBox(height: 10,),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
